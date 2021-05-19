@@ -1,0 +1,16 @@
+.card {
+    border: solid 1px $primary;
+}
+.card-img {
+    border: solid 1px gray;
+}
+.info-content {
+    padding-right: 3rem;
+    border-right: 15px solid $danger;
+    text-align: center;
+}
+.image-division {
+    column-count: 3;
+    column-gap: 10px;
+    column-rule: none;
+}

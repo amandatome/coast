@@ -1,0 +1,23 @@
+.col-resources {
+    border-radius: 15px;
+    background-color: $success;
+    color: $white;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    h3 {
+        font-size: 16pt;
+    }
+    a {
+        color: $white;
+        i {
+            margin-bottom: 1rem;
+        }
+    }
+}
+.banner-image {
+    display: block;
+    margin: auto;
+}
+#caption {
+    text-align: center;
+}

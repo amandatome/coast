@@ -1,0 +1,21 @@
+.jumbotron {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: solid 15px $danger;
+    height:80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    background-position: 100% 58%;
+    h1 {
+        padding: 10px;
+        background-color: $success;
+        border-radius: 5px;
+    }
+    h2 {
+        background: none;
+        background-color: $success;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}

@@ -1,0 +1,64 @@
+//Nav
+.navbar {
+    border-bottom: solid 15px $danger;
+}
+.bg-light {
+    background-color: #ffffff!important;
+}
+.site-logo {
+    padding-right: 5px !important;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    font-size: calc(18px + (36 - 18) * ((100vw - 300px) / (1600 - 300)));
+    text-decoration: none;
+    color: $black !important;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    img {
+        width: 6.5rem !important
+    }
+}
+
+.nav-link {
+    color: $black !important;
+    &:hover {
+        color: $primary !important;
+        text-decoration: underline;
+    }
+    &:visited {
+        color: $primary!important;
+    }
+}
+
+//General Pagination
+.pagination, .search-pagination {
+    display: flex;
+    justify-content: center;
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin-top: 3rem;
+        .page-numbers {
+            padding: .75rem .75rem;
+            margin-left: 0.5rem;
+            line-height: 1.25;
+            color: $danger;
+            background-color: $white;
+            border: 1px solid $dark;
+            text-decoration: none !important;
+            border-radius: 5px;
+        }
+    }
+    .current {
+        background-color: $danger !important;
+        color: $white !important;
+    }
+}

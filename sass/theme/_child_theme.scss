@@ -1,0 +1,162 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    line-height: 1.5em !important;
+    font-size: 16pt;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    padding: 10px;
+    background-color: $success;
+    color: $white;
+    border-radius: 5px;
+}
+h2 {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, $secondary 75%);
+}
+a {
+    color: $danger;
+
+    &:hover {
+        color: $success;
+    }
+    &:visited {
+        color: $primary;
+    }
+}
+.btn {
+    &:visited {
+        color: $white;
+    }
+}
+
+//Box-Shadows
+.box-shadow {
+    box-shadow: 14px 12px 0px 0px $success;
+    border: 1px solid grey;
+    padding: 10px;
+    text-align: center;
+}
+
+//Contact Form
+.nf-form-content button,
+.nf-form-content input[type=button],
+.nf-form-content input[type=submit] {
+    background-color: $primary !important;
+    border-radius: 5px;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: #194f7b !important;
+        color: $white !important;
+    }
+}
+
+.nf-form-content .list-select-wrap .nf-field-element>div, .nf-form-content input:not([type=button]), .nf-form-content textarea {
+	background: none!important;
+}
+
+//Contact Form response
+.nf-response-msg {
+    border: solid 3px rgb(166, 228, 166);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+//Breadcrumb Nav
+#breadcrumbs {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.separator {
+    padding: 0 5px;
+}
+
+#documents {
+    .pdf-link,
+    .call-number {
+        text-align: right;
+    }
+}
+
+.search-image-description {
+    border-left: $primary solid 5px;
+}
+
+//Sitemap
+.sitemap-pages {
+    column-count: 3;
+    column-gap: 10px;
+    column-rule: none;
+    margin: 3rem 0;
+}
+
+//Search
+.search-results{
+    h2 {
+        background: none;
+    }
+}
+.entry-content {
+    .attachment {
+        img {
+            width: 500px!important;
+        }
+    }
+}
+//Footer=============================
+#wrapper-footer {
+    background: $primary;
+    color: $white;
+    border-top: solid 15px $secondary;
+}
+
+footer {
+    margin-bottom: 0 !important;
+    h2 {
+        border-bottom: solid 3px $secondary !important;
+        font-size: calc(20px + (24 - 20) * ((100vw - 300px) / (1600 - 300)));
+        background: none;
+    }
+    p,
+    a {
+        color: $white;
+    }
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+            color: #d8d7d7ef;
+        }
+        &:visited {
+            color: $secondary;
+        }
+    }
+    ul {
+        padding: 0;
+        li {
+            list-style-type: none;
+            content: "\f105";
+            &:before {
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                margin-right: 8px;
+                content: "\f105";
+            }
+        }
+    }
+
+    .footer-area-five {
+        a {
+            text-decoration: underline;
+            text-decoration-color: $secondary;
+        }
+    }
+}

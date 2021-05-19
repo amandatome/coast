@@ -1,0 +1,211 @@
+@media (min-width: 1200px) {
+    nav {
+        .container {
+            max-width: 1480px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .jumbotron {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 812px) {
+    .page-id-20 {
+        .jumbotron {
+            background-position: 2% 58%;
+            height: 170vh;
+        }
+    }
+
+    .jumbotron {
+        height: 90vh;
+    }
+
+    .nav-logo {
+        max-width: 350px;
+    }
+
+    .page-id-5267 {
+        .btn {
+            margin-bottom: 2rem;
+        }
+
+        .img-fluid {
+            box-shadow: none;
+        }
+    }
+
+    .info-content {
+        margin-top: 1rem;
+        border: none;
+        padding: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .page-id-20 {
+        .jumbotron {
+            background-position: 2% 58%;
+            height: 70vh;
+        }
+    }
+
+    .jumbotron {
+        background-position: 2% 58%;
+        height: 50vh;
+    }
+}
+
+@media only screen and (max-width: 736px) {
+    .page-id-20 {
+        .jumbotron {
+            background-position: 53% 0%;
+            height: 160vh;
+        }
+    }
+
+    .jumbotron {
+        background-position: 53% 0%;
+        height: 100vh;
+    }
+
+    footer {
+        .row:nth-child(2) {
+            margin-top: 0 !important;
+        }
+    }
+
+    .container {
+        max-width: 700px !important;
+        padding: 0 !important;
+    }
+
+    #content,
+    footer {
+        padding: 1rem !important;
+    }
+
+    .pdf-link,
+    .call-number {
+        text-align: left !important;
+    }
+
+    .sitemap-pages {
+        column-count: 2;
+        column-gap: 5px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .page-id-20 {
+        .jumbotron {
+            background-position: 53% 0%;
+            height: 115vh;
+        }
+    }
+
+    .site-main {
+        nav {
+            display: none;
+        }
+    }
+
+    .nav-logo {
+        max-width: 250px;
+    }
+
+    .image-division,
+    .sitemap-pages {
+        column-count: 1;
+        column-gap: 0px;
+    }
+    
+    .navigation {
+        margin-bottom: 0 !important;
+
+        .row {
+            justify-content: center !important;
+
+            a {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+
+    .pdf-link,
+    .call-number {
+        text-align: left !important;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .page-id-20 {
+        .jumbotron {
+            background-position: 53% 0%;
+            height: 98vh;
+        }
+    }
+
+    .jumbotron {
+        height: 30vh;
+
+        h1 {
+            font-size: 30pt;
+        }
+    }
+
+    h2 {
+        background: none;
+
+        span {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, $secondary 75%);
+        }
+    }
+
+    .page-id-5267 {
+        .btn {
+            margin-bottom: 2rem;
+        }
+
+        .img-fluid {
+            box-shadow: none;
+        }
+    }
+
+    .site-logo {
+        display: none
+    }
+
+    .image-division,
+    .sitemap-pages {
+        column-count: 1;
+        column-gap: 0px;
+    }
+
+    .pdf-link,
+    .call-number {
+        text-align: left !important;
+    }
+
+    //Videos 
+    .embed-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        overflow: hidden;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,49 @@
+.page-template-page-images,
+.page-template-page-collection-images {
+    h2 {
+        background: none;
+        font-size: 18pt;
+        span {
+            background: linear-gradient(180deg,rgba(255,255,255,0) 50%, $secondary 75%);
+        }
+    }
+    .card {
+        border: none;
+    }
+    .card-footer {
+        border-top: solid 3px $danger;
+    }
+}
+.modal-body {
+    text-align: center;
+}
+.modal-footer {
+    button {
+        background-color: $primary;
+        color: $white;
+        &:hover {
+            color: $white; 
+        }
+    }
+}
+.page-id-5267 {
+    .page-title{
+        background: none;
+        span {
+            background: linear-gradient(180deg,rgba(255,255,255,0) 50%, $secondary 75%);
+        }
+    }
+    .img-fluid {
+        box-shadow: 14px 12px 0px 0px $danger;
+        border: grey solid 1px;
+    }
+    .site-logo {
+        box-shadow: none;
+        border: none;
+    }
+    footer{
+        h2 {
+            padding:none!important;
+        }
+    }
+}
