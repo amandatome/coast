@@ -5,7 +5,7 @@ body {
 
 body {
     line-height: 1.5em !important;
-    font-size: 16pt;
+    font-size: 20px;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -20,6 +20,7 @@ h2 {
 }
 a {
     color: $danger;
+    text-decoration: underline;
 
     &:hover {
         color: $success;
@@ -159,4 +160,33 @@ footer {
             text-decoration-color: $secondary;
         }
     }
+}
+
+//Fonts
+.font-resize {
+    display: flex;
+    justify-content: space-between;
+}
+#font-decrease, #font-increase, #font-reset {
+    font-weight: 700;
+}
+
+#font-decrease {
+    font-size: 16px;
+}
+
+#font-increase {
+    font-size: 24px;
+}
+
+#font-reset {
+    font-size: 20px
+}
+//Search Bar
+.search-bar {
+    display: flex;
+    justify-content: flex-end;
+}
+.input-group {
+    width: 400px;
 }

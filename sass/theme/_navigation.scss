@@ -37,6 +37,14 @@
     }
 }
 
+#main-menu li a {
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 //General Pagination
 .pagination, .search-pagination {
     display: flex;

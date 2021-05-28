@@ -26,6 +26,13 @@ function theme_enqueue_styles() {
         wp_enqueue_script( 'comment-reply' );
     }
 }
+//jQuery
+function shapeSpace_include_custom_jquery() {
+
+  wp_deregister_script('jquery');
+  wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.5.1.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'shapeSpace_include_custom_jquery');
 
 function add_child_theme_textdomain() {
     load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
@@ -206,7 +213,7 @@ return $redirect_url;
 //Breadcrumbs
 function the_breadcrumb() {
   global $post;
-  echo '<nav aria-label="breadcrumbs"> <ol id="breadcrumbs">';
+  echo '<nav role="navigation" aria-label="breadcrumbs"> <ol id="breadcrumbs">';
   if (!is_home()) {
       echo '<li><a href="';
       echo get_option('home');
@@ -219,12 +226,12 @@ function the_breadcrumb() {
               $anc = get_post_ancestors( $post->ID );
               $title = get_the_title();
               foreach ( $anc as $ancestor ) {
-                  $output = '<li><a aria-label="current-page" href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="separator"> <i class="fas fa-chevron-right fa-xs"></i></li>';
+                  $output = '<li><a aria-current="page" href="'.get_permalink($ancestor).'"'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="separator"> <i class="fas fa-chevron-right fa-xs"></i></li>';
               }
               echo $output;
-              echo '<li aria-label="current-page" title="'.$title.'"> '.$title.'</li></nav>';
+              echo '<li aria-current="page"> '.$title.'</li></ol></nav>';
           } else {
-              echo '<li aria-label="current-page"> '.get_the_title().'</li></nav>';
+              echo '<li aria-current="page"> '.get_the_title().'</li></ol></nav>';
           }
       }
   }

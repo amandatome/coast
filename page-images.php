@@ -17,22 +17,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <main class="site-main" id="main">
+
 <?php get_template_part('global-templates/hero-banner-home'); ?>
 
     <div class="<?php echo esc_attr( $container ); ?> mt-4" id="content" tabindex="-1">
-    <?php the_breadcrumb();?>
 
     <?php $galleries = get_field('archive_gallery');?>
-
             <section class='search  mt-5'>
-            <div class='row'>
+          
                 <?php while (have_posts()) : the_post(); ?>
-                <div class='col-md-6 offset-md-6 my-3'>
-                    <?php dynamic_sidebar('search_area'); ?>
+                <div class='row font-resize'>
+	    	<?php the_breadcrumb();?>
+			<?php include 'font-resize.php'; ?>
+		</div>
+		<div class='row search-bar my-4'>
+				<?php dynamic_sidebar('search_area');?>
                 </div>
-                <?php endwhile ?>
-            </div>
             <!--.row-->
+                <?php endwhile ?>
+            
         </section>
         <!--.search-->
         <section class='info'>
@@ -107,9 +110,11 @@ $container = get_theme_mod( 'understrap_container_type' );
             ?>
                     <?php 
         if(($images)) :?>
-                    <div class='card-columns'>
-                        <?php foreach ($images as $image) :  ?>
-                        <div class='card shadow text-center mb-4'>
+                     <div class='card-columns'>
+                        <?php $data_count = 0;?>
+                        <?php foreach ($images as $image): ?>
+                        <?php $data_count++;
+                        echo '<div class="card shadow text-center mb-4" data-toggle="modal" data-target="#image-modal-'. $data_count . '"' . '>'?>
                             <a href='#' style='border-bottom: none' class='pop'>
                                 <img class="image-resource card-img-top" src="<?php echo $image['sizes']['medium']; ?>"
                                     alt="<?php echo $image['alt']; ?>" />
@@ -135,6 +140,7 @@ $container = get_theme_mod( 'understrap_container_type' );
    
 <?php  include 'modal.php';?>
   <!-- Page Navigation -->
+ 
   <nav class='pagination' aria-label="Pagination Navigation">
             <?php
                     $big = 999999999; // need an unlikely integer
@@ -146,7 +152,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                         'total' => $total_pages,
                         "type" => 'list',
                         'prev_next' => false,
-                        'before_page_number' => '<span class="screen-reader-text" aria-label="Goto">'.$tanslated.'</span>'
+                        'before_page_number' => '<span class="screen-reader-text" >'.$tanslated.'</span>'
                     ));?>
         </nav>
         <?php  include 'navigation-page.php';?>

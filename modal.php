@@ -1,6 +1,9 @@
 <!-- Creates the bootstrap modal where the image will appear -->
-<?php foreach ($images as $image) :  ?>
-    <div class="modal fade" id="image-modal" tabindex="-1" role="dialog" aria-labelledby="image-modal" aria-hidden="true">
+<?php $image_count = 0;?>
+
+<?php foreach ($images as $image) :  
+  $image_count++;
+        echo '<div class="modal fade" id="image-modal-' . $image_count . '"' . 'tabindex="-1" role="dialog" aria-labelledby="image-modal-' . $image_count . '"'. 'aria-hidden="true">'?>
         <div class="modal-dialog" role='document'>
             <div class="modal-content">
             <div class="modal-body">
@@ -12,5 +15,7 @@
             </div>
             </div>
         </div>
+       
         </div>
- <?php endforeach; ?>
+      
+<?php endforeach; ?>

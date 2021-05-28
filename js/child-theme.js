@@ -7062,7 +7062,6 @@ jQuery(function($) {
   $('.image-preview').attr('src', $(this).find('img').attr('src'));
   lastClicked = $(this);
 
-  $('#image-modal').modal('show');
   $(document).on('hidden.bs.modal', function () {
     $(lastClicked).focus();
 
@@ -7070,3 +7069,20 @@ jQuery(function($) {
   });
 });
 })
+
+//Font resize ==========================
+$(".font-button").bind("click", function (e) {
+  var size = parseInt($('body').css("font-size"));
+  if ($(this).hasClass("plus")) {
+      size = size + 2;
+  } else if($(this).hasClass("minus")) {
+    size = size - 2;
+    if (size <= 10) {
+        size = 10;
+    }
+  }
+  else {   
+      size = 20;
+  }
+  $('body').css("font-size", size);
+});

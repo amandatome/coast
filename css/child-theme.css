@@ -11618,7 +11618,7 @@ body {
 
 body {
   line-height: 1.5em !important;
-  font-size: 16pt;
+  font-size: 20px;
   font-family: 'Raleway', sans-serif; }
 
 h1 {
@@ -11632,7 +11632,8 @@ h2 {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #F6D55C 75%); }
 
 a {
-  color: #c44023; }
+  color: #c44023;
+  text-decoration: underline; }
   a:hover {
     color: #113450; }
   a:visited {
@@ -11659,6 +11660,9 @@ a {
   .nf-form-content input[type=submit]:hover {
     background-color: #194f7b !important;
     color: #fff !important; }
+
+.nf-form-content .list-select-wrap .nf-field-element > div, .nf-form-content input:not([type=button]), .nf-form-content textarea {
+  background: none !important; }
 
 .nf-response-msg {
   border: solid 3px #a6e4a6;
@@ -11737,6 +11741,37 @@ footer {
     -webkit-text-decoration-color: #F6D55C;
             text-decoration-color: #F6D55C; }
 
+.font-resize {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+#font-decrease, #font-increase, #font-reset {
+  font-weight: 700; }
+
+#font-decrease {
+  font-size: 16px; }
+
+#font-increase {
+  font-size: 24px; }
+
+#font-reset {
+  font-size: 20px; }
+
+.search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.input-group {
+  width: 400px; }
+
 /*
 * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
@@ -11806,6 +11841,9 @@ footer {
 .page-id-5267 footer h2 {
   padding: none !important; }
 
+.all-images-collection a, .navigation a {
+  text-decoration: none !important; }
+
 .navbar {
   border-bottom: solid 15px #c44023; }
 
@@ -11838,6 +11876,12 @@ footer {
     text-decoration: underline; }
   .nav-link:visited {
     color: #20639B !important; }
+
+#main-menu li a {
+  text-decoration: none; }
+
+.dropdown:hover .dropdown-menu {
+  display: block; }
 
 .pagination, .search-pagination {
   display: -webkit-box;
@@ -11875,7 +11919,8 @@ footer {
   .col-resources h3 {
     font-size: 16pt; }
   .col-resources a {
-    color: #fff; }
+    color: #fff;
+    text-decoration: none !important; }
     .col-resources a i {
       margin-bottom: 1rem; }
 
@@ -11990,7 +12035,25 @@ footer {
             column-count: 2;
     -webkit-column-gap: 5px;
        -moz-column-gap: 5px;
-            column-gap: 5px; } }
+            column-gap: 5px; }
+  .font-resize {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .search-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .input-group {
+    width: 350px !important; }
+  #breadcrumbs {
+    display: none; } }
 
 @media only screen and (max-width: 576px) {
   .page-id-20 .jumbotron {

@@ -19,7 +19,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 <main class="site-main mb-5" id="main">
 <?php get_template_part('global-templates/hero-banner-home'); ?>
 	<div class="<?php echo esc_attr( $container ); ?> mt-4 " id="content" tabindex="-1">
-	<?php the_breadcrumb();?>
+    <div class='row font-resize'>
+					    	<?php the_breadcrumb();?>
+							<?php include 'font-resize.php';?>
+						</div>
+						<div class='row search-bar my-4'>
+								<?php dynamic_sidebar('search_area');?>
+						</div>
     <section id="mission-information">
 			<h2 class='mt-5'><span><?php the_field('general_info_heading', 'option')?></span></h2>
 			<div class="row mt-5">
@@ -28,6 +34,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					$map_image = get_field('map_image');
 					$size = 'full';
 					echo wp_get_attachment_image($map_image, $size, false, array('class' => 'card-img')); ?>
+                    <?php the_field('place_names');?>
 					</div>
 					<div class="col-lg-5 col-md-12 d-flex align-items-center">
                         <div class='info-content'>

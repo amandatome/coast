@@ -22,7 +22,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-12 content-area" id="primary">
 
 				<main class="site-main" id="main">
-
+				<div class='row font-resize'>
+					    	<?php the_breadcrumb();?>
+							<?php include 'font-resize.php';?>
+						</div>
+						<div class='row search-bar my-4'>
+								<?php dynamic_sidebar('search_area');?>
+						</div>
 					<section class="error-404 not-found">
 
 						<header class="page-header">

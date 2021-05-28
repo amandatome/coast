@@ -14,7 +14,13 @@ $container = get_theme_mod('understrap_container_type');
 
 <section id='sitemap'>
                 <h1><?php the_title();?></h1>
-                <?php the_breadcrumb();?>
+                <div class='row font-resize'>
+					    	<?php the_breadcrumb();?>
+							<?php include 'font-resize.php';?>
+						</div>
+						<div class='row search-bar my-4'>
+								<?php dynamic_sidebar('search_area');?>
+						</div>
                 <?php include 'sitemap.php';?>
 </section>
     </div>

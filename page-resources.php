@@ -19,7 +19,13 @@ $container = get_theme_mod('understrap_container_type');
         <main class="site-main" id="main">
             <section id='resources'>
                 <h1><?php the_title();?></h1>
-                <?php the_breadcrumb();?>
+                  <div class='row font-resize'>
+					    	<?php the_breadcrumb();?>
+							<?php include 'font-resize.php';?>
+						</div>
+						<div class='row search-bar my-4'>
+								<?php dynamic_sidebar('search_area');?>
+						</div>
                 <div class='row border-bottom border-primary'>
                 <div class='col-md-4 p-3' >
                         <!-- GENERAL-->

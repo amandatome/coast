@@ -12,7 +12,7 @@ $nextID = $pages[$current+1];
 ?>
 
 <?php $parent_title = get_the_title($post->post_parent); ?>
-<div class="navigation mb-5">
+<nav class="navigation mb-5">
 <div class='row d-flex justify-content-between'>
 <?php if (!empty($prevID)) { ?>
 <a href="<?php echo get_permalink($prevID); ?>" class='btn btn-lg btn-success'
@@ -23,4 +23,4 @@ if (!empty($nextID)) { ?>
 rel="next" title="<?php echo get_the_title($nextID); ?>"><?php echo get_the_title($nextID)?><span> <i class="fas fa-chevron-right"></i></span></a>
 </div>
 <?php } ?>
-</div><!-- .navigation -->
+</nav><!-- .navigation -->
