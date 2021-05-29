@@ -44,6 +44,24 @@ a {
 }
 
 //Contact Form
+.nf-form-content {
+    padding: 0!important;
+    max-width: 100%!important;
+}
+.nf-form-content button,
+.nf-form-content input[type=button],
+.nf-form-content input[type=submit] {
+    background-color: $danger !important;
+    color: #ffffff !important;
+    border: $danger !important;
+    border-radius: 5px;
+    font-size: 16pt;
+    &:hover{
+        background-color: $danger;
+        border-color: $danger;
+        transform: scale(1.1);
+    }
+}
 .nf-form-content button,
 .nf-form-content input[type=button],
 .nf-form-content input[type=submit] {
@@ -183,7 +201,7 @@ footer {
     font-size: 20px
 }
 //Search Bar
-.search-bar {
+.search-bar, .font-resize-404 {
     display: flex;
     justify-content: flex-end;
 }

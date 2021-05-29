@@ -11,26 +11,23 @@ $container = get_theme_mod('understrap_container_type');
 
 ?>
 
-<div class="wrapper" id="page-wrapper">
-
-    <div class="<?php echo esc_attr($container); ?>" id="content" tabindex="-1">
-
-
-        <main class="site-main" id="main">
-            <section id='resources'>
-                <h1><?php the_title();?></h1>
-                  <div class='row font-resize'>
-					    	<?php the_breadcrumb();?>
-							<?php include 'font-resize.php';?>
-						</div>
-						<div class='row search-bar my-4'>
-								<?php dynamic_sidebar('search_area');?>
-						</div>
+<main class="site-main" id="content">
+    <?php if (have_posts()) : while ( have_posts() ) : the_post(); ?>
+    <div class="<?php echo esc_attr($container); ?> mt-4" tabindex="-1">
+        <section id='resources'>
+            <h1 aria-labelledby='resources'><?php the_title();?></h1>
+                <div class='row font-resize'>
+                    <?php the_breadcrumb();?>
+                    <?php include 'font-resize.php';?>
+                </div>
+                 <div class='row search-bar my-4'>
+                    <?php dynamic_sidebar('search_area');?>
+                </div>
                 <div class='row border-bottom border-primary'>
-                <div class='col-md-4 p-3' >
-                        <!-- GENERAL-->
-                <h2>General Missions</h2>
-                    <ul class='pages'>
+                    <div class='col-md-4 p-3' >
+                    <!-- GENERAL-->
+                    <h2>General Missions</h2>
+                        <ul class='pages'>
                             <?php $args = array(
                             "post_type" => 'page',
                                 'category_name'    => 'general-images',
@@ -45,9 +42,7 @@ $container = get_theme_mod('understrap_container_type');
                             $general_images_query = new WP_Query( $args ); ?>
                             
                             <?php if ( $general_images_query->have_posts() ) : ?>
-                            
                                 <?php while ( $general_images_query->have_posts() ) : $general_images_query->the_post(); ?>
-                         
                                 <li ><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
                             
                                 <?php endwhile; ?>
@@ -57,13 +52,12 @@ $container = get_theme_mod('understrap_container_type');
                             <?php else : ?>
                                 <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
                             <?php endif; ?>
-                            </ul>
-                            </div>
+                        </ul>
+                    </div>
                     <div class='col-md-4 p-3 border-primary border-left border-right' >
                     <h2>First Nations</h2>
-                    <ul class='pages'>
-                        <!-- //FIRST NATIONS -->
-                            
+                        <ul class='pages'>
+                        <!-- //FIRST NATIONS --> 
                             <?php $args = array(
                             "post_type" => 'page',
                             'category_name'    => 'first-nations-images',
@@ -90,13 +84,12 @@ $container = get_theme_mod('understrap_container_type');
                             <?php else : ?>
                                 <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
                             <?php endif; ?>
-                            </ul>
+                        </ul>
                     </div>
-
                     <div class='col-md-4 p-3' >
                         <!-- MARINE -->
                         <h2>Marine Missions</h2>
-                    <ul class='pages'>
+                            <ul class='pages'>
                             <?php $args = array(
                             "post_type" => 'page',
                                 'category_name'    => 'marine-images',
@@ -122,42 +115,41 @@ $container = get_theme_mod('understrap_container_type');
                             <?php else : ?>
                                 <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
                             <?php endif; ?>
-                            </ul>
+                        </ul>
                     </div>
-           
-                </div> <!-- .row -->
+            </div> <!-- .row -->
             <div class='row'>
             <div class='col-md-4 p-3' >
             <h2>Medical Missions</h2>
-                        <!-- MEDICAL -->
-                    <ul class='pages'>
-                            <?php $args = array(
-                            "post_type" => 'page',
-                                'category_name'    => 'medical-images',
-                                'order' => 'ASC',
-                                'orderby' => 'menu_order',
-                                'posts_per_page'  => -1,
-                            );
-                            ?>
-                            <?php 
-                            // the query
-                            $medical_images_query = new WP_Query( $args ); ?>
-                            
-                            <?php if ( $medical_images_query->have_posts() ) : ?>
-                            
-                                <?php while ( $medical_images_query->have_posts() ) : $medical_images_query->the_post(); ?>
-                         
-                                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                            
-                                <?php endwhile; ?>
-                                <!-- end of the loop -->
-                                <?php wp_reset_postdata(); ?>
-                            
-                            <?php else : ?>
-                                <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-                            <?php endif; ?>
-                            </ul>
-                    </div>
+                <!-- MEDICAL -->
+                <ul class='pages'>
+                        <?php $args = array(
+                        "post_type" => 'page',
+                            'category_name'    => 'medical-images',
+                            'order' => 'ASC',
+                            'orderby' => 'menu_order',
+                            'posts_per_page'  => -1,
+                        );
+                        ?>
+                        <?php 
+                        // the query
+                        $medical_images_query = new WP_Query( $args ); ?>
+                        
+                        <?php if ( $medical_images_query->have_posts() ) : ?>
+                        
+                            <?php while ( $medical_images_query->have_posts() ) : $medical_images_query->the_post(); ?>
+                        
+                            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                        
+                            <?php endwhile; ?>
+                            <!-- end of the loop -->
+                            <?php wp_reset_postdata(); ?>
+                        
+                        <?php else : ?>
+                            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                        <?php endif; ?>
+                    </ul>
+                </div>
             <div class='col-md-4 p-3 border-primary border-left border-right'>
                 <!-- SCHOOLS -->
                 <h2>Schools</h2>
@@ -188,8 +180,8 @@ $container = get_theme_mod('understrap_container_type');
                             <?php else : ?>
                                 <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
                             <?php endif; ?>
-                            </ul>
-                    </div>
+                    </ul>
+            </div>
             <div class='col-md-4  p-3'>
                 <!-- DOCUMENTS -->
                 <h2>Documents</h2>
@@ -219,13 +211,16 @@ $container = get_theme_mod('understrap_container_type');
                             <?php else : ?>
                                 <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
                             <?php endif; ?>
-                            </ul>
-                            </div>
-                        </div>
-                </section>
-                <?php  include 'navigation-page.php';?>
+                    </ul>
+                 </div>
             </div>
-        </main>
+        </section>
+        <?php  include 'navigation-page.php';?>
     </div>
+    <?php endwhile;
+    else : ?>
+    <p>Sorry no posts matched your criteria.</p>
+    <?php endif; ?>
+</main>
 
 <?php get_footer();?>

@@ -124,15 +124,6 @@ function register_widget_areas() {
     'before_title'  => '<h2 class="footer-heading">',
     'after_title'   => '</h2>',
   ));
-  register_sidebar( array(
-    'name'          => 'Footer area five',
-    'id'            => 'footer_area_five',
-    'description'   => 'This widget area description',
-    'before_widget' => '<section class="footer-area footer-area-five">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h2 class="footer-heading">',
-    'after_title'   => '</h2>',
-  ));
 register_sidebar( array(
   'name'          => 'Search Area',
   'id'            => 'search_area',
@@ -142,30 +133,10 @@ register_sidebar( array(
   'after_widget'  => '</section>',
   'before_title'  => '<h2>',
   'after_title'   => '</h2>',
-));
-
-register_sidebar( array( 
-  'name' => '404 Page', 
-  'id' => '404',
-  'description'  => __( 'Content for your 404 error page goes here.' ),
-  'before_widget' => '<div id="error-box">', 
-  'after_widget' => '</div>', 
-  'before_title' => '<h4 class="widget-title">', 
-  'after_title' => '</h4>'
-) );
+  ));
 }
 add_action( 'widgets_init', 'register_widget_areas' );
 
-register_sidebar( array(
-  'name'          => 'Search Area',
-  'id'            => 'search_area',
-  'role'    =>'search',
-  'description'   => 'Search box area for image pages',
-  'before_widget' => '<section class="search-area">',
-  'after_widget'  => '</section>',
-  'before_title'  => '<h2>',
-  'after_title'   => '</h2>',
-));
 //Add categories to pages
 function myplugin_settings() {  
   // Add category metabox to page
@@ -213,7 +184,7 @@ return $redirect_url;
 //Breadcrumbs
 function the_breadcrumb() {
   global $post;
-  echo '<nav role="navigation" aria-label="breadcrumbs"> <ol id="breadcrumbs">';
+  echo '<nav aria-labelledby="site-breadcrumbs" id="site-breadcrumbs"> <ol id="breadcrumbs">';
   if (!is_home()) {
       echo '<li><a href="';
       echo get_option('home');

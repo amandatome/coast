@@ -11649,6 +11649,26 @@ a {
   padding: 10px;
   text-align: center; }
 
+.nf-form-content {
+  padding: 0 !important;
+  max-width: 100% !important; }
+
+.nf-form-content button,
+.nf-form-content input[type=button],
+.nf-form-content input[type=submit] {
+  background-color: #c44023 !important;
+  color: #ffffff !important;
+  border: #c44023 !important;
+  border-radius: 5px;
+  font-size: 16pt; }
+  .nf-form-content button:hover,
+  .nf-form-content input[type=button]:hover,
+  .nf-form-content input[type=submit]:hover {
+    background-color: #c44023;
+    border-color: #c44023;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+
 .nf-form-content button,
 .nf-form-content input[type=button],
 .nf-form-content input[type=submit] {
@@ -11761,7 +11781,7 @@ footer {
 #font-reset {
   font-size: 20px; }
 
-.search-bar {
+.search-bar, .font-resize-404 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11841,7 +11861,7 @@ footer {
 .page-id-5267 footer h2 {
   padding: none !important; }
 
-.all-images-collection a, .navigation a {
+.view-button a, .navigation a {
   text-decoration: none !important; }
 
 .navbar {
@@ -11923,13 +11943,6 @@ footer {
     text-decoration: none !important; }
     .col-resources a i {
       margin-bottom: 1rem; }
-
-.banner-image {
-  display: block;
-  margin: auto; }
-
-#caption {
-  text-align: center; }
 
 .jumbotron {
   display: -webkit-box;
@@ -12021,9 +12034,7 @@ footer {
   footer .row:nth-child(2) {
     margin-top: 0 !important; }
   .container {
-    max-width: 700px !important;
-    padding: 0 !important; }
-  #content,
+    max-width: 700px !important; }
   footer {
     padding: 1rem !important; }
   .pdf-link,
@@ -12081,7 +12092,9 @@ footer {
         margin-bottom: 0.5rem; }
   .pdf-link,
   .call-number {
-    text-align: left !important; } }
+    text-align: left !important; }
+  #about {
+    padding: 1.5rem; } }
 
 @media only screen and (max-width: 375px) {
   .page-id-20 .jumbotron {
@@ -12129,5 +12142,9 @@ footer {
     left: 0;
     width: 100%;
     height: 100%; } }
+
+@media only screen and (max-width: 374px) {
+  .input-group {
+    width: 300px !important; } }
 
 /*# sourceMappingURL=child-theme.css.map */

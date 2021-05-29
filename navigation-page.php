@@ -1,5 +1,5 @@
 <hr>
-        <?php
+<?php
 $pagelist = get_pages('sort_column=menu_order&sort_order=asc');
 $pages = array();
 foreach ($pagelist as $page) {
@@ -12,7 +12,7 @@ $nextID = $pages[$current+1];
 ?>
 
 <?php $parent_title = get_the_title($post->post_parent); ?>
-<nav class="navigation mb-5">
+<nav aria-label='previous and next navigation' class="navigation mb-5">
 <div class='row d-flex justify-content-between'>
 <?php if (!empty($prevID)) { ?>
 <a href="<?php echo get_permalink($prevID); ?>" class='btn btn-lg btn-success'
